@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200328072809) do
+ActiveRecord::Schema.define(version: 20200328090537) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,6 +22,25 @@ ActiveRecord::Schema.define(version: 20200328072809) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_accounts_on_email", unique: true
     t.index ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
+  end
+
+  create_table "dragons", force: :cascade do |t|
+    t.integer "account_id"
+    t.integer "location_id"
+    t.string "name"
+    t.string "description"
+    t.integer "gender"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_dragons_on_account_id"
+    t.index ["location_id"], name: "index_dragons_on_location_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

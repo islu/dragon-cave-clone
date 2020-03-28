@@ -22,23 +22,22 @@
         Where would you like to travel?</p>
 
       <div class="row">
-        <div class="col"><%= link_to "Alpine", "#" %></div>
-        <div class="col"><%= link_to "Coast", "#" %></div>
-        <div class="col"><%= link_to "Desert", "#" %></div>
-        <div class="col"><%= link_to "Forest", "#" %></div>
-        <div class="col"><%= link_to "Jungle", "#" %></div>
-        <div class="col"><%= link_to "Volcano", "#" %></div>
+        <% @locations.each do |location| %>
+          <div class="col">
+              <%= link_to location.name, location_path(location) %>
+          </div>
+        <% end %>
       </div>
     </div>
 
     <div class="col-4">
       <p class="h5">Rencent News</p>
       <ul class="list-group">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <li class="list-group-item">I</li>
+        <li class="list-group-item">Clone</li>
+        <li class="list-group-item">Dragon Cave</li>
+        <li class="list-group-item">To Practise</li>
+        <li class="list-group-item">Ruby on Rails 5+</li>
       </ul>
       <p class="h5 pt-2">Connect</p>
     </div>

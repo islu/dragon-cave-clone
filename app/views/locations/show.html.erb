@@ -1,0 +1,19 @@
+<div class="contains">
+  <p class="h3 pt-5"><%= @location.name %></p>
+
+  <div class="row">
+    <% @locations.each do |location| %>
+      <div class="col">
+          <%= link_to location.name, location_path(location) %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row pt-2">
+
+    <p><%= @location.description %></p>
+    <p>You don’t want to disturb the dragons, but some of the eggs are far enough away that you could steal one.
+      Three of the eggs catch your eye. Which do you take?</p>
+  </div>
+
+</div>

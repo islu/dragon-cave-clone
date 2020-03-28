@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DragonCaveClone</title>
+    <title>Dragon Cave Clone</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,6 +13,13 @@
 
     <div class="container">
       <div class="row justify-content-center">
+
+        <% if account_signed_in? && current_account.id == 100 %>
+          <div class="col-sm-2">
+            <%= render partial: "layouts/admin" %>
+          </div>
+        <% end %>
+
         <div class="col-sm-8">
           <%= render partial: "layouts/header" %>
           <%= yield %>
