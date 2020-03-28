@@ -10,6 +10,17 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+
+    <%= render partial: "layouts/header" %>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+    <%= render partial: "layouts/footer" %>
   </body>
 </html>
