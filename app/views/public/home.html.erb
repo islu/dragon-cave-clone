@@ -1,1 +1,47 @@
-homepage
+<div class="container">
+  <div class="row pt-5">
+
+    <div class="col">
+      <% if !account_signed_in? %>
+        <p>Welcome to Dragon Cave! Dragon Cave is an online adoptables game. Collect eggs, raise them to adulthood,
+          and then breed them to cre­ate interesting lineages. New dragons are added regularly!</p>
+      <% end %>
+      <p class="h5">The Cave</p>
+      <p>You enter the cave and see many large dragons scattered about,
+        some with hatchlings, sleeping on piles of gold.</p>
+      <% if account_signed_in? %>
+        <p>You also see a pile of scrolls on the ground. Having been here before,
+          you have started recording information about the growth and progress of your eggs.</p>
+      <% else %>
+        <p>You also see a pile of scrolls on the ground. If you’d like, you can take one to record your travels on,
+          or if you already have one, you can pick it up.</p>
+      <% end %>
+      <p>Near the entrance to the cave, there are some abandoned eggs.
+        If you don’t want the dragons inside to die, you can take one of those instead.</p>
+      <p>One of the scrolls in the pile contains a map charting dragon habitats across Galsreim and the surrounding area.
+        Where would you like to travel?</p>
+
+      <div class="row">
+        <div class="col"><%= link_to "Alpine", "#" %></div>
+        <div class="col"><%= link_to "Coast", "#" %></div>
+        <div class="col"><%= link_to "Desert", "#" %></div>
+        <div class="col"><%= link_to "Forest", "#" %></div>
+        <div class="col"><%= link_to "Jungle", "#" %></div>
+        <div class="col"><%= link_to "Volcano", "#" %></div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <p class="h5">Rencent News</p>
+      <ul class="list-group">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Morbi leo risus</li>
+        <li class="list-group-item">Porta ac consectetur ac</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+      </ul>
+      <p class="h5 pt-2">Connect</p>
+    </div>
+
+  </div>
+</div>
