@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      Share
+    </div>
+    <div class="col">
+      Badge
+    </div>
+    <div class="col">
+      State
+    </div>
+  </div>
+
+
+  <div class="row pt-5">
+    <div class="col">Name</div>
+    <div class="col">Description</div>
+  </div>
+  <% @dragons.each do |dragon| %>
+    <div class="row">
+      <div class="col"><%= dragon.name %></div>
+      <div class="col"><%= dragon.description %></div>
+    </div>
+  <% end %>
+
+</div>

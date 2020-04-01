@@ -19,7 +19,7 @@
           <%= link_to "Cave", root_path, class: "pr-2" %>
           <% if account_signed_in? %>
             <%= link_to "Account", edit_account_registration_path, class: "pr-2" %>
-            <%= link_to "Dragons", "#", class: "pr-2" %>
+            <%= link_to "Dragons", dragons_path, class: "pr-2" %>
             <%= link_to "Trading", "#", class: "pr-2" %>
           <% end %>
           <%= link_to "Help", "#", class: "pr-2" %>

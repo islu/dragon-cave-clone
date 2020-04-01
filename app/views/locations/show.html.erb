@@ -10,10 +10,17 @@
   </div>
 
   <div class="row pt-2">
-
     <p><%= @location.description %></p>
     <p>You don’t want to disturb the dragons, but some of the eggs are far enough away that you could steal one.
       Three of the eggs catch your eye. Which do you take?</p>
+      
+    <% @eggs.each do |egg| %>
+    <div class="col text-center">
+      <%= link_to '<img src="/egg.gif" alt="egg">'.html_safe, pikeup_path(egg) %><br>
+      <%= egg.description %>
+    </div>
+    <% end %>
+
   </div>
 
 </div>
